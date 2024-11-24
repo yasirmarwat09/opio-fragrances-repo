@@ -131,17 +131,17 @@ let startX = 0;
 function updateImagesForSmallScreens() {
   if (window.innerWidth < 800) {
     heroImages.forEach((img, index) => {
-      img.src = `../Assets/${index + 1}-hero-img-resized.jpg`;
+      img.src = `Assets/${index + 1}-hero-img-resized.jpg`;
     });
     if (bottomHeroImg) {
-      bottomHeroImg.src = `../Assets/mobile-size-bottom-hero-img.jpg`;
+      bottomHeroImg.src = `Assets/mobile-size-bottom-hero-img.jpg`;
     }
   } else {
     heroImages.forEach((img, index) => {
-      img.src = `../Assets/${index + 1}-hero-img.jpg`;
+      img.src = `Assets/${index + 1}-hero-img.jpg`;
     });
     if (bottomHeroImg) {
-      bottomHeroImg.src = `../Assets/bottom-hero-img.jpg`;
+      bottomHeroImg.src = `Assets/bottom-hero-img.jpg`;
     }
   }
 }
