@@ -758,7 +758,7 @@ hr {
 
   /* hero section */
   .hero {
-    min-height: 300px;
+    min-height: 350px;
   }
 
   .hero-img,
@@ -829,8 +829,8 @@ hr {
     gap: 5px;
   }
   .perfume-item img {
-    width: 190px;
-    height: 190px;
+    width: 180px;
+    height: 180px;
   }
   .perfume-name,
   .perfume-price {
