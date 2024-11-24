@@ -833,12 +833,12 @@ hr {
   .perfume-grid {
     grid-template-columns: repeat(2, 1fr); 
     gap: 10px;
-    margin: 0 5px;
+    padding: 0 5px;
 
 }
 .perfume-item img {
-  width: 175px;
-  height: 175px;
+  width: 150px;
+  height: 150px;
 }
 
 .follow-us {
