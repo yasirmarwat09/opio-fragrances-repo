@@ -601,6 +601,7 @@ body {
   height: 500px;
   object-fit: cover;
   display: block;
+  margin-bottom: 40px;
 }
 
 .follow-us {
