@@ -601,11 +601,11 @@ body {
   height: 500px;
   object-fit: cover;
   display: block;
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 }
 
 .follow-us {
-  margin-top: 75px;
+  margin-top: 55px;
   text-transform: uppercase;
 }
 .follow-us::after {
