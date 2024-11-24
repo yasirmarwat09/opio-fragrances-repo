@@ -758,7 +758,9 @@ hr {
 
   /* hero section */
   .hero {
-    min-height: 350px;
+    position: relative;
+    top: 75px;
+    min-height: 300px;
   }
 
   .hero-img,
