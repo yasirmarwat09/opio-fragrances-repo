@@ -700,10 +700,8 @@ function updateCart(cartItems) {
 async function loadCart() {
   try {
     const response = await fetch("/cart");
-    
-    // Check if the response is not OK
     if (!response.ok) {
-      throw new Error(`Failed to load cart data: ${response.statusText}`);
+      throw new Error("Failed to load cart data.");
     }
 
     const cart = await response.json();
@@ -714,15 +712,14 @@ async function loadCart() {
     } else if (Array.isArray(cart.products)) {
       updateCart(cart.products); // If cart contains a 'products' key, use that
     } else {
-      throw new Error("Invalid cart data structure"); // Explicitly throw error if cart data is not as expected
+      console.error("Invalid cart data structure", cart);
+      updateCart([]); // If the structure is invalid, pass an empty array
     }
   } catch (error) {
-    console.error("Error loading cart:", error);  // Log the error message
-    // Throw the error so it can be handled by calling functions if necessary
-    throw error;
+    console.error("Error loading cart:", error);
+    updateCart([]); // In case of error, clear the cart UI
   }
 }
-
 
 // Function to display the order popup
 function showOrderPopup() {
