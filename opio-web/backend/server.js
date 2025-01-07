@@ -12,7 +12,10 @@ const app = express();
 const port = 3000;
 
 // Enable CORS for all routes
-app.use(cors()); // This enables CORS for all routes
+app.use(cors({
+  origin: 'https://yasirmarwat09.github.io', // Only allow requests from your frontend
+}));
+
 
 // Middleware to parse incoming JSON data
 app.use(express.json());
