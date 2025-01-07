@@ -61,11 +61,11 @@ const cartItemSchema = new mongoose.Schema({
 const CartItem = mongoose.model("CartItem", cartItemSchema, "cart");
 
 // Serve static files (CSS, images, etc.)
-app.use(express.static(path.join(__dirname, "./../")));
+app.use(express.static(path.join(__dirname, ".././")));
 
 // Route to render the homepage
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "./../", "index.html"));
+  res.sendFile(path.join(__dirname, ".././", "index.html"));
 });
 
 // Route to fetch product details by name
