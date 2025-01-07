@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfume</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header id="header-content-container"></header>
+    <div class="breadcrumb-navigation">
+      <a href="index.html">Back To Home</a>
+    </div>
+
+    <div class="product-container">
+      <div class="image-gallery">
+        <img
+          id="featured-image"
+          class="featured-image"
+          alt="Featured Product Image"
+        />
+      </div>
+
+      <div class="product-details">
+        <h1 id="product-title" class="product-title"></h1>
+        <div id="product-price" class="product-price perfume-price-rs"></div>
+        <hr class="divider" />
+        <p id="product-description" class="product-description"></p>
+        <div class="disclaimer-box">
+          <strong>Disclaimer:</strong>
+          We offer fragrances that compete with designer brands, but we do not
+          use their exact fragrances or have any affiliation with the designer
+          brands or their manufacturers. All trademarks are the property of
+          their respective owners.
+        </div>
+        <div class="action-buttons">
+          <button class="add-to-cart-button">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="full-description-section">
+      <h2 class="description-title">Description</h2>
+      <p id="description-paragraph" class="description-paragraph"></p>
+      <div id="top-notes" class="fragrance-notes">
+        <strong class="note-heading">TOP NOTES:</strong>
+      </div>
+      <div id="middle-notes" class="fragrance-notes">
+        <strong class="note-heading">MIDDLE NOTES:</strong>
+      </div>
+      <div id="base-notes" class="fragrance-notes">
+        <strong class="note-heading">BASE NOTES:</strong>
+      </div>
+    </div>
+
+    <footer id="footer-content-container"></footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>

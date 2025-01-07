@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <header id="header-content-container"></header>
+    <!-- breadcrumb section -->
+    <div class="breadcrumb-container">
+      <div class="breadcrumb-contact">
+        <div class="bg-breadcrumb">
+          <div class="title-page">
+            <h2>Contact</h2>
+          </div>
+          <div class="bread-crumb">
+            <a href="index.html" title="home-page"
+              >Home
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </a>
+            <strong>Contact</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="contact-info">
+      <h1 class="contact-us-heading shop-now-heading">Contact Us</h1>
+      <div class="contact-content">
+        <div class="contact-details">
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="details">
+              <strong>Address</strong>
+              <p>Suite 600, Liaqat Road, Rawalpindi</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <div class="details">
+              <strong>Phone Number</strong>
+              <p>+92335 9399351</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div class="details">
+              <strong>Email</strong>
+              <p>
+                <a href="#">info@opiofragrances.pk</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-image">
+          <img src="assets/contact-us-page-image.jpg" alt="Contact Image" />
+        </div>
+      </div>
+    </section>
+    <section class="contact-form">
+      <h2 class="shop-now-heading">Send Us a Message</h2>
+      <form id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="contact-page-email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+          </div>
+        </div>
+        <label for="message">Message:</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Your Message"
+          required
+        ></textarea>
+        <button class="contact-page-submit-button" type="submit">
+          Send Message
+        </button>
+      </form>
+      <p id="responseMessage" style="color: green; margin-top: 10px"></p>
+    </section>
+    <footer id="footer-content-container"></footer>
+    <script src="index.js"></script>
+  </body>
+</html>

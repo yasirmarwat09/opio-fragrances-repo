@@ -1,0 +1,134 @@
+[
+  {
+    "name": "Divine for Women",
+    "price": 3499,
+    "category": "Women",
+    "image": "../Assets/best-seller/divine.jpg",
+    "introduction": "Introducing Divine, the essence of femininity and confidence. This modern, woody fragrance is designed for the woman who dares to be herself, embracing her individuality and inner strength.",
+    "description": "A fresh, floral, and sensual scent that embodies the spirit of the contemporary woman.",
+    "topNotes": ["Bergamot", "Mandarin"],
+    "middleNotes": ["Jasmine", "Rose"],
+    "baseNotes": ["Patchouli", "Vanilla"]
+  },
+  {
+    "name": "Sparkle for Women",
+    "price": 2499,
+    "category": "Women",
+    "image": "../Assets/best-seller/sparkle.jpg",
+    "introduction": "Sparkle's lush blend of lavender, vanilla, and musk creates a soothing and peaceful atmosphere, perfect for everyday wear.",
+    "description": "Its sweet and creamy notes will envelop you in a sense of calm, making you feel like you're walking on air.",
+    "topNotes": ["Lavender", "Pear", "Bergamot"],
+    "middleNotes": ["Whipped Cream", "Coconut", "Praline", "Vanilla Orchid"],
+    "baseNotes": ["Musk", "Woody Notes"]
+  },
+  {
+    "name": "Plush for Women",
+    "price": 3499,
+    "category": "Women",
+    "image": "../Assets/best-seller/Creative-PLush.jpg",
+    "introduction": "Introducing 'PLUSH' - a captivating and elegant floral perfume designed for the modern woman.",
+    "description": "This exquisite scent combines the sweetness of rose petals, the subtlety of jasmine, and the freshness of orange blossom.",
+    "topNotes": ["Pear", "Tangerine", "Blackcurrant", "Bergamot"],
+    "middleNotes": ["Orange Blossom", "Jasmine", "Rose"],
+    "baseNotes": ["Sandalwood", "Amber", "Patchouli"]
+  },
+  {
+    "name": "Emotion for Women",
+    "price": 3250,
+    "category": "Women",
+    "image": "../Assets/best-seller/Emotion.jpg",
+    "introduction": "Emotion is a rich, indulgent blend of freshness, sensuality, and glamour.",
+    "description": "Indulge in the thrill of the forbidden with Emotion, the seductive and alluring fragrance by OPIO.",
+    "topNotes": ["Raspberry", "Tuberose"],
+    "middleNotes": ["Orange Blossom", "Jasmine Sambac"],
+    "baseNotes": ["Amber", "Cashmere Wood"]
+  },
+  {
+    "name": "Momentum for Men",
+    "price": 3499,
+    "category": "Men",
+    "image": "../Assets/best-seller/momentum.jpg",
+    "introduction": "Unveil the mystery of the Orient with Momentum, the captivating fragrance by OPIO.",
+    "description": "This rich, woody scent is inspired by the ancient traditions of the Middle East, where warmth and hospitality reign supreme.",
+    "topNotes": ["Red Berries", "Peach", "Bergamot"],
+    "middleNotes": ["Jasmine", "Peony", "Red Lily"],
+    "baseNotes": ["Sandalwood", "Vanilla Flower", "Musk"]
+  },
+  {
+    "name": "Orlene for Women",
+    "price": 3499,
+    "category": "Women",
+    "image": "../Assets/best-seller/orlene.jpg",
+    "introduction": "Fame is a fragrance that celebrates the confident, adventurous spirit of the contemporary woman.",
+    "description": "Its unique blend of fresh, floral, and sensual notes makes it perfect for everyday wear.",
+    "topNotes": ["Sparkling Mandarin", "Black Currant", "Apple"],
+    "middleNotes": ["Rose", "Orange Blossom", "Jasmine"],
+    "baseNotes": ["Amber", "Patchouli", "Sensual White Musk", "Sandalwood"]
+  },
+  {
+    "name": "Gorgeous for Women",
+    "price": 3250,
+    "category": "Women",
+    "image": "../Assets/best-seller/PinkGorgeous.jpg",
+    "introduction": "Unleash your inner rebel with Gorgeous, the sultry and sophisticated fragrance by OPIO.",
+    "description": "This modern, floral scent is designed for the woman who embodies confidence, glamour, and a hint of mischief.",
+    "topNotes": ["Almond", "Coffee", "Bergamot", "Lemon"],
+    "middleNotes": ["Tuberose", "Jasmine Sambac", "Orange Blossom", "Orris", "Bulgarian Rose"],
+    "baseNotes": ["Tonka Bean", "Cacao", "Vanilla", "Praline", "Sandalwood", "Musk", "Amber", "Cashmere Wood", "Cinnamon", "Patchouli", "Cedar"]
+  },
+  {
+    "name": "Revive for Men",
+    "price": 3499,
+    "category": "Men",
+    "image": "../Assets/best-seller/revive.jpg",
+    "introduction": "Make a statement with Revive, a masterpiece by the house of OPIO. The bold and seductive fragrance for the modern rebel.",
+    "description": "This oriental, woody scent is designed for the fearless and confident individual who lives life on their own terms.",
+    "topNotes": ["Cardamom"],
+    "middleNotes": ["Toffee"],
+    "baseNotes": ["Amberwood"]
+  },
+  {
+    "name": "Silver Smoke for Men",
+    "price": 3499,
+    "category": "Men",
+    "image": "../Assets/best-seller/silversmoke.jpg",
+    "introduction": "Experience the thrill of victory with Silver Smoke, the fresh and energetic fragrance that captures the essence of athletic prowess and competitive spirit.",
+    "description": "This fragrance is designed to reflect the thrill of competition and the pursuit of victory.",
+    "topNotes": ["Orange", "Sea Notes", "Aldehydes", "Blood Mandarin"],
+    "middleNotes": ["Pepper", "Neroli", "Cedar"],
+    "baseNotes": ["Tonka Bean", "Vanilla", "White Musk", "Amber", "Vetiver", "Elemi Resin"]
+  },
+  {
+    "name": "Velvet for Women",
+    "price": 2499,
+    "category": "best-seller",
+    "image": "../Assets/best-seller/velvet.jpg",
+    "introduction": "Embrace the beauty of nature with Velvet, a vibrant and floral perfume that captures the essence of a lush garden in full bloom.",
+    "description": "This modern, feminine scent is inspired by the freedom and joy of spontaneity.",
+    "topNotes": ["Jasmine"],
+    "middleNotes": ["Tuberose"],
+    "baseNotes": ["Rangoon Creeper"]
+  },
+  {
+    "name": "Vibrant for Men",
+    "price": 3250,
+    "category": "Men",
+    "image": "../Assets/best-seller/vibrant.jpg",
+    "introduction": "Embark on a celestial journey with Vibrant, the radiant and ethereal fragrance by OPIO.",
+    "description": "Vibrant is a fragrance that captures the essence of wonder, dreams, and limitless possibilities.",
+    "topNotes": ["Mandarin Orange", "Sicilian Orange", "Calabrian Bergamot"],
+    "middleNotes": ["Pink Pepper", "Pepper", "Indonesian", "Nutmeg", "Tunisian Neroli", "Guatemalan Cardamom"],
+    "baseNotes": ["Java Vetiver Oil"]
+  },
+  {
+    "name": "Victorious for Men",
+    "price": 3499,
+    "category": "Men",
+    "image": "../Assets/best-seller/victorious1.jpg",
+    "introduction": "Rise to triumph with Victorious, the empowering fragrance by OPIO.",
+    "description": "This bold, woody scent is inspired by the thrill of victory and the unbridled energy of the young and fearless.",
+    "topNotes": ["Apple", "Ginger", "Bergamot"],
+    "middleNotes": ["Sage", "Juniper Berries", "Geranium"],
+    "baseNotes": ["Amberwood", "Tonka Bean", "Cedar", "Vetiver", "Olibanum"]
+  }
+]

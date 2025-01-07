@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Checkout</title>
+  </head>
+  <body>
+    <header id="header-content-container"></header>
+    <div class="container1">
+      <div class="checkout-container">
+        <div class="contact">
+          <h2 class="contact-heading">Contact</h2>
+          <a href="/index.html" class="login-btn" title="Home">Home</a>
+        </div>
+        <div class="space"></div>
+        <div class="email-sec">
+          <div class="email">
+            <label for="email1">Email:</label>
+            <input
+              type="email"
+              id="email1"
+              name="email"
+              placeholder="Your Email"
+              required
+            /><br /><br />
+          </div>
+          <form action="#" method="post">
+            <input type="checkbox" id="subscribe" name="subscribe" />
+            <label for="subscribe">Email me with news and offers</label>
+          </form>
+        </div>
+        <div class="delivery-container">
+          <div class="delivery">
+            <h2>Delivery</h2>
+            <select
+              id="country"
+              name="country"
+              aria-label="Select your country"
+              required
+            >
+              <option value="" disabled selected>Country/Region</option>
+              <option value="pk">Pakistan</option></select
+            ><br /><br />
+            <div class="delivery-details">
+              <input
+                type="text"
+                id="first-name"
+                name="first-name"
+                placeholder="First Name (optional)"
+              />
+              <input
+                type="text"
+                id="last-name"
+                name="last-name"
+                placeholder="Last Name"
+                required
+              /><br /><br />
+              <input
+                type="text"
+                id="address"
+                name="address"
+                placeholder="Address"
+                required
+              /><br /><br />
+              <input
+                type="text"
+                id="apartment"
+                name="apartment"
+                placeholder="Apartment, suite (optional)"
+              /><br /><br />
+              <input
+                type="text"
+                id="city"
+                name="city"
+                placeholder="City"
+                required
+              />
+              <input
+                type="text"
+                id="postal"
+                name="postal"
+                placeholder="Postal Code(Optional)"
+                required
+              /><br /><br />
+              <input
+                type="number"
+                id="phone"
+                name="phone"
+                placeholder="Phone Number"
+                required
+              /><br /><br />
+              <div class="checkbox-container save-info">
+                <input type="checkbox" id="save" name="save" />
+                <label for="save">Save this information for next time</label>
+              </div>
+              <br />
+            </div>
+          </div>
+          <div class="shipping-section">
+            <h2>Shipping</h2>
+            <form action="#">
+              <div class="payment-method">
+                <label for="shipping-method"></label>
+                <input
+                  type="text"
+                  id="shipping-method"
+                  name="shipping-method"
+                  value="Shipping rate: Rs.199.00"
+                  readonly
+                />
+              </div>
+            </form>
+          </div>
+          <div class="payment-section">
+            <h2>Payment</h2>
+            <form action="#" method="post">
+              <!-- Cash on Delivery Input -->
+              <div class="payment-method">
+                <p>All transactions are secured and encrypted.</p>
+                <label for="payment-method">Payment Method</label>
+                <input
+                  type="text"
+                  id="payment-method"
+                  name="payment-method"
+                  value="Cash on Delivery"
+                  readonly
+                />
+              </div>
+            </form>
+          </div>
+          <div class="complete-order">
+            <button type="submit" class="complete-order-btn">
+              Complete Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="checkout-container">
+        <h2>Order Summary</h2>
+
+        <!-- Cart Items Section -->
+        <div id="cart-items">
+          <!-- This is where individual cart items will be listed dynamically -->
+        </div>
+
+        <!-- Subtotal Section -->
+        <div class="summary-details">
+          <div class="summary-item">
+            <span>Subtotal:</span>
+            <span id="subtotal-amount">Rs. 0.00</span>
+            <!-- Placeholder for subtotal -->
+          </div>
+          <div class="summary-item">
+            <span>Shipping Charges:</span>
+            <span id="shipping-amount">Rs. 199.00</span>
+            <!-- Placeholder for shipping charges -->
+          </div>
+          <div class="summary-item total">
+            <span>Total Amount:</span>
+            <span id="total-amount-calculated">Rs. 199.00</span>
+            <!-- Placeholder for total amount -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer id="footer-content-container"></footer>
+    <script src="index.js"></script>
+  </body>
+</html>
