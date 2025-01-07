@@ -491,11 +491,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-//for rendering data from database (mongoDB)
 // Function to fetch product data by name
 function fetchProductData(productName) {
   // Make the API call to the backend
-  fetch(`http://localhost:3000/product/${encodeURIComponent(productName)}`)
+  fetch(`https://opio-fragrances.vercel.app/product/${encodeURIComponent(productName)}`)
     .then((response) => response.json())
     .then((product) => {
       if (product) {
@@ -544,10 +543,6 @@ if (productName) {
   fetchProductData(productName);
 }
 
-//adding items to cart
-//adding items to cart
-//adding items to cart
-//adding items to cart
 //adding items to cart
 // Function to update the cart UI
 function updateCart(cartItems) {
@@ -625,7 +620,7 @@ function updateCart(cartItems) {
       const productId = e.target.closest("button").getAttribute("data-id");
       try {
         // Send request to remove item from the cart
-        const response = await fetch(`/remove-from-cart/${productId}`, {
+        const response = await fetch(`https://opio-fragrances.vercel.app/remove-from-cart/${productId}`, {
           method: "DELETE",
         });
 
@@ -665,7 +660,7 @@ function updateCart(cartItems) {
 
       try {
         // Send request to update item quantity
-        const response = await fetch(`/update-cart/${productId}`, {
+        const response = await fetch(`https://opio-fragrances.vercel.app/update-cart/${productId}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -699,7 +694,7 @@ function updateCart(cartItems) {
 // Fetch the current cart data when the page loads
 async function loadCart() {
   try {
-    const response = await fetch("/cart");
+    const response = await fetch("https://opio-fragrances.vercel.app/cart");
     if (!response.ok) {
       throw new Error("Failed to load cart data.");
     }
@@ -773,7 +768,7 @@ if (addToCartButton) {
 
     try {
       // Send product to the backend to add to the cart
-      const response = await fetch("/add-to-cart", {
+      const response = await fetch("https://opio-fragrances.vercel.app/add-to-cart", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -851,11 +846,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //fetching data from cart collection and displaying it in checkout page
-
-//fetching data from cart collection and displaying it in checkout page
-
-//fetching data from cart collection and displaying it in checkout page
-
 document.addEventListener("DOMContentLoaded", async function () {
   const checkElementsExist = () => {
     const subtotalElement = document.getElementById("subtotal-amount");
@@ -881,7 +871,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   try {
     await waitForElements(); // Wait until the elements are available
 
-    const response = await fetch("/checkout-data");
+    const response = await fetch("http://localhost:3000/checkout-data");
 
     if (!response.ok) {
       throw new Error("Failed to fetch checkout data");
@@ -906,9 +896,6 @@ document.addEventListener("DOMContentLoaded", async function () {
   }
 });
 
-//confirming orders
-//confirming orders
-//confirming orders
 //confirming orders
 document.addEventListener("DOMContentLoaded", async function () {
   const completeOrderBtn = document.querySelector(".complete-order-btn");
@@ -967,7 +954,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       };
 
       try {
-        const response = await fetch("/api/checkout", {
+        const response = await fetch("http://localhost:3000/api/checkout", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -1025,8 +1012,6 @@ document.addEventListener("DOMContentLoaded", async function () {
   }
 });
 
-//contact us page data fetching
-//contact us page data fetching
 //contact us page data fetching
 function assignContactFormFunctionality() {
   const contactForm = document.getElementById("contactForm");
