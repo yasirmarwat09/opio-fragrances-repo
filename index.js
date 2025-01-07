@@ -231,17 +231,17 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateImagesForSmallScreens() {
       if (window.innerWidth < 800) {
         heroImages.forEach((img, index) => {
-          img.src = `../Assets/${index + 1}-hero-img-resized.jpg`;
+          img.src = `Assets/${index + 1}-hero-img-resized.jpg`;
         });
         if (bottomHeroImg) {
-          bottomHeroImg.src = `../Assets/mobile-size-bottom-hero-img.jpg`;
+          bottomHeroImg.src = `Assets/mobile-size-bottom-hero-img.jpg`;
         }
       } else {
         heroImages.forEach((img, index) => {
-          img.src = `../Assets/${index + 1}-hero-img.jpg`;
+          img.src = `Assets/${index + 1}-hero-img.jpg`;
         });
         if (bottomHeroImg) {
-          bottomHeroImg.src = `../Assets/bottom-hero-img.jpg`;
+          bottomHeroImg.src = `Assets/bottom-hero-img.jpg`;
         }
       }
     }
@@ -700,8 +700,10 @@ function updateCart(cartItems) {
 async function loadCart() {
   try {
     const response = await fetch("/cart");
+    
+    // Check if the response is not OK
     if (!response.ok) {
-      throw new Error("Failed to load cart data.");
+      throw new Error(`Failed to load cart data: ${response.statusText}`);
     }
 
     const cart = await response.json();
@@ -712,14 +714,15 @@ async function loadCart() {
     } else if (Array.isArray(cart.products)) {
       updateCart(cart.products); // If cart contains a 'products' key, use that
     } else {
-      console.error("Invalid cart data structure", cart);
-      updateCart([]); // If the structure is invalid, pass an empty array
+      throw new Error("Invalid cart data structure"); // Explicitly throw error if cart data is not as expected
     }
   } catch (error) {
-    console.error("Error loading cart:", error);
-    updateCart([]); // In case of error, clear the cart UI
+    console.error("Error loading cart:", error);  // Log the error message
+    // Throw the error so it can be handled by calling functions if necessary
+    throw error;
   }
 }
+
 
 // Function to display the order popup
 function showOrderPopup() {
