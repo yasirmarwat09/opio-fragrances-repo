@@ -1,3 +1,4 @@
+const API_URL = "https://opio-fragrances-backend.vercel.app";
 //js for menu buttons items
 //js for menu buttons items
 //js for menu buttons items
@@ -443,6 +444,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// for fetching header and footer
 function loadContent(url, containerId, elementSelector) {
   fetch(url)
     .then((response) => {
@@ -479,25 +481,21 @@ function loadContent(url, containerId, elementSelector) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Vercel base URL
-  const baseUrl = "https://opio-fragrances-repo.vercel.app";
-
   // Load header if the container exists
   if (document.querySelector("#header-content-container")) {
-    loadContent(`${baseUrl}/index.html`, "header-content-container", "header");
+    loadContent("index.html", "header-content-container", "header");
   }
 
   // Load footer if the container exists
   if (document.querySelector("#footer-content-container")) {
-    loadContent(`${baseUrl}/index.html`, "footer-content-container", "footer");
+    loadContent("index.html", "footer-content-container", "footer");
   }
 });
 
-//for rendering data from database (mongoDB)
 // Function to fetch product data by name
 function fetchProductData(productName) {
   // Make the API call to the backend
-  fetch(`https://opio-fragrances-repo.vercel.app/product/${encodeURIComponent(productName)}`)
+  fetch(`${API_URL}/product/${encodeURIComponent(productName)}`)
     .then((response) => response.json())
     .then((product) => {
       if (product) {
@@ -537,7 +535,7 @@ function fetchProductData(productName) {
     });
 }
 
-// Get the product name from the URL (example: /product?name=Victorious%20for%20Men)
+// Get the product name from the URL (example: /product/Victorious%20for%20Men)
 const urlParams = new URLSearchParams(window.location.search);
 const productName = urlParams.get("name");
 
@@ -546,10 +544,6 @@ if (productName) {
   fetchProductData(productName);
 }
 
-//adding items to cart
-//adding items to cart
-//adding items to cart
-//adding items to cart
 //adding items to cart
 // Function to update the cart UI
 function updateCart(cartItems) {
@@ -627,7 +621,7 @@ function updateCart(cartItems) {
       const productId = e.target.closest("button").getAttribute("data-id");
       try {
         // Send request to remove item from the cart
-        const response = await fetch(`https://opio-fragrances-repo.vercel.app/remove-from-cart/${productId}`, {
+        const response = await fetch(`${API_URL}/remove-from-cart/${productId}`, {
           method: "DELETE",
         });
 
@@ -667,7 +661,7 @@ function updateCart(cartItems) {
 
       try {
         // Send request to update item quantity
-        const response = await fetch(`https://opio-fragrances-repo.vercel.app/update-cart/${productId}`, {
+        const response = await fetch(`${API_URL}/update-cart/${productId}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -701,7 +695,7 @@ function updateCart(cartItems) {
 // Fetch the current cart data when the page loads
 async function loadCart() {
   try {
-    const response = await fetch("https://opio-fragrances-repo.vercel.app/cart");
+    const response = await fetch(`${API_URL}/cart`);
     if (!response.ok) {
       throw new Error("Failed to load cart data.");
     }
@@ -775,7 +769,7 @@ if (addToCartButton) {
 
     try {
       // Send product to the backend to add to the cart
-      const response = await fetch("https://opio-fragrances-repo.vercel.app/add-to-cart", {
+      const response = await fetch(`${API_URL}/add-to-cart`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -823,16 +817,14 @@ function assignCheckoutFunctionality() {
 
   if (checkoutButton) {
     checkoutButton.addEventListener("click", () => {
-      // Redirect to the checkout page on Vercel
-      window.location.href = "https://opio-fragrances-repo.vercel.app/checkout";
+      window.location.href = "/checkout";
     });
     isButtonFound = true; // Button functionality assigned
   }
 
   if (homeButton) {
     homeButton.addEventListener("click", () => {
-      // Redirect to the homepage on Vercel
-      window.location.href = "https://opio-fragrances-repo.vercel.app/index.html";
+      window.location.href = "index.html";
     });
     isButtonFound = true; // Button functionality assigned
   }
@@ -855,11 +847,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //fetching data from cart collection and displaying it in checkout page
-
-//fetching data from cart collection and displaying it in checkout page
-
-//fetching data from cart collection and displaying it in checkout page
-
 document.addEventListener("DOMContentLoaded", async function () {
   const checkElementsExist = () => {
     const subtotalElement = document.getElementById("subtotal-amount");
@@ -885,7 +872,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   try {
     await waitForElements(); // Wait until the elements are available
 
-    const response = await fetch("https://opio-fragrances-repo.vercel.app/checkout-data");
+    const response = await fetch(`${API_URL}/checkout-data`);
 
     if (!response.ok) {
       throw new Error("Failed to fetch checkout data");
@@ -910,10 +897,6 @@ document.addEventListener("DOMContentLoaded", async function () {
   }
 });
 
-
-//confirming orders
-//confirming orders
-//confirming orders
 //confirming orders
 document.addEventListener("DOMContentLoaded", async function () {
   const completeOrderBtn = document.querySelector(".complete-order-btn");
@@ -972,7 +955,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       };
 
       try {
-        const response = await fetch("https://opio-fragrances-repo.vercel.app/api/checkout", {
+        const response = await fetch(`${API_URL}/api/checkout`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -1031,8 +1014,6 @@ document.addEventListener("DOMContentLoaded", async function () {
 });
 
 //contact us page data fetching
-//contact us page data fetching
-//contact us page data fetching
 function assignContactFormFunctionality() {
   const contactForm = document.getElementById("contactForm");
 
@@ -1056,7 +1037,7 @@ function assignContactFormFunctionality() {
       );
 
       try {
-        const response = await fetch("https://opio-fragrances-repo.vercel.app/api/messages", {
+        const response = await fetch(`${API_URL}/api/messages`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ name, email, message }),
@@ -1115,4 +1096,3 @@ function showPopup(title, message) {
 }
 
 pollForContactForm();
-
