@@ -1,3 +1,4 @@
+const API_URL = "https://opio-fragrances-backend.vercel.app";
 //js for menu buttons items
 //js for menu buttons items
 //js for menu buttons items
@@ -494,7 +495,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Function to fetch product data by name
 function fetchProductData(productName) {
   // Make the API call to the backend
-  fetch(`https://opio-fragrances.vercel.app/product/${encodeURIComponent(productName)}`)
+  fetch(`${API_URL}/product/${encodeURIComponent(productName)}`)
     .then((response) => response.json())
     .then((product) => {
       if (product) {
@@ -620,7 +621,7 @@ function updateCart(cartItems) {
       const productId = e.target.closest("button").getAttribute("data-id");
       try {
         // Send request to remove item from the cart
-        const response = await fetch(`https://opio-fragrances.vercel.app/remove-from-cart/${productId}`, {
+        const response = await fetch(`${API_URL}/remove-from-cart/${productId}`, {
           method: "DELETE",
         });
 
@@ -660,7 +661,7 @@ function updateCart(cartItems) {
 
       try {
         // Send request to update item quantity
-        const response = await fetch(`https://opio-fragrances.vercel.app/update-cart/${productId}`, {
+        const response = await fetch(`${API_URL}/update-cart/${productId}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -694,7 +695,7 @@ function updateCart(cartItems) {
 // Fetch the current cart data when the page loads
 async function loadCart() {
   try {
-    const response = await fetch("https://opio-fragrances.vercel.app/cart");
+    const response = await fetch(`${API_URL}/cart`);
     if (!response.ok) {
       throw new Error("Failed to load cart data.");
     }
@@ -768,7 +769,7 @@ if (addToCartButton) {
 
     try {
       // Send product to the backend to add to the cart
-      const response = await fetch("https://opio-fragrances.vercel.app/add-to-cart", {
+      const response = await fetch(`${API_URL}/add-to-cart`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -871,7 +872,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   try {
     await waitForElements(); // Wait until the elements are available
 
-    const response = await fetch("http://localhost:3000/checkout-data");
+    const response = await fetch(`${API_URL}/checkout-data`);
 
     if (!response.ok) {
       throw new Error("Failed to fetch checkout data");
@@ -954,7 +955,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       };
 
       try {
-        const response = await fetch("http://localhost:3000/api/checkout", {
+        const response = await fetch(`${API_URL}/api/checkout`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -1036,7 +1037,7 @@ function assignContactFormFunctionality() {
       );
 
       try {
-        const response = await fetch("http://localhost:3000/api/messages", {
+        const response = await fetch(`${API_URL}/api/messages`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ name, email, message }),
